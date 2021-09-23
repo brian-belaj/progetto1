@@ -4,6 +4,8 @@
     "start_url": "/index.php",
     "orientation": "portrait",
     "display": "standalone",
+    "background_color" :"#fff",
+    "theme_color": "#ff99cc",
     "icons": [
         {
             "src": "/images/icons/android-icon-192x192.png",
