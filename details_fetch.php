@@ -30,7 +30,7 @@
                                 transform="translate(-126.021 -336.652)" fill="#fff"></path>
                         </g>
                     </svg>
-                    Alias
+                    Alias!
                 </a>
 
                 <a href="#" class="px-1 h4 text-white d-none d-lg-inline-block"><i class="bi bi-person-fill"></i></a>
