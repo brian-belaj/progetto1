@@ -29,11 +29,11 @@ for (var i = 0; i<btn.length; i++){
                 else{
                     console.log("FUCKYEAH");
                 }
-                window.location.href= event.target.getAttribute(href);
+                window.location.href= event.target.getAttribute("href");
             });
             deferredPrompt = null;
         } else {
-            window.location.href= event.target.getAttribute(href);
+            window.location.href= event.target.getAttribute("href");
         }
     });
 }
