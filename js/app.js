@@ -16,7 +16,7 @@ window.addEventListener("beforeinstallprompt", function(event){
     return false;
 });
 
-var btn = document.querySelectorAll(".btn");
+var btn = document.querySelectorAll(".btn-primary");
 for (var i = 0; i<btn.length; i++){
     btn[i].addEventListener("click", function(event){
         event.preventDefault();
@@ -37,3 +37,20 @@ for (var i = 0; i<btn.length; i++){
         }
     });
 }
+
+var customerbtn=document.getElementById("customer-btn");
+var login_container=document.getElementById("login_container");
+var cancel_button=document.getElementById("cancel-btn");
+
+customerbtn.addEventListener("click",function(event){
+    console.log("ho cliccato sul customerbtn");
+    login_container.classList.add("login-form-show");
+
+
+});
+cancel_button.addEventListener("click",function(event){
+    login_container.classList.remove("login-form-show");
+
+
+});
+
