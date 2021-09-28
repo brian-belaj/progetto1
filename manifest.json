@@ -1,9 +1,12 @@
 {
     "name": "esercizio metaphora pwa",
     "short_name": "pwa",
+    "scope": "/",
     "start_url": "/index.php",
     "orientation": "portrait",
     "display": "standalone",
+    "background_color" :"#fff",
+    "theme_color": "#ff99cc",
     "icons": [
         {
             "src": "/images/icons/android-icon-192x192.png",
@@ -15,6 +18,49 @@
             "sizes": "512x512",
             "type": "image/png",
             "purpose": "maskable any"
+        }
+    ],
+    "screenshots": [
+        {
+            "src": "/images/screenshots/1.png",
+            "sizes": "540x720",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/screenshots/2.png",
+            "sizes": "540x720",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/screenshots/3.png",
+            "sizes": "540x720",
+            "type": "image/png"
+        }
+    ],
+    "shortcuts": [
+        {
+            "name": "lista",
+            "short_name": "lista",
+            "description": "lista prodotti",
+            "url": "/list.php",
+            "icons": [
+                {
+                    "src": "/images/shotcuts/list.png",
+                    "sizes": "192x192"
+                }
+            ]
+        },
+        {
+            "name": "details",
+            "short_name": "details",
+            "description": "dettagli",
+            "url": "/details.php",
+            "icons": [
+                {
+                    "src": "/images/shotcuts/details.png",
+                    "sizes": "192x192"
+                }
+            ]
         }
     ]
 }
