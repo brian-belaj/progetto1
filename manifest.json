@@ -1,6 +1,7 @@
 {
     "name": "esercizio metaphora pwa",
     "short_name": "pwa",
+    "scope":"/",
     "start_url": "/index.php",
     "orientation": "portrait",
     "display": "standalone",
@@ -18,5 +19,49 @@
             "type": "image/png",
             "purpose": "maskable any"
         }
+    ],
+    "screenshots":[
+        {
+            "src":"/images/screenshots/image1.png",
+            "type":"image/png",
+            "sizes":"540x720"
+        },
+        {
+            "src":"/images/screenshots/image2.png",
+            "type":"image/png",
+            "sizes":"540x720"
+        },
+        {
+            "src":"/images/screenshots/image3.png",
+            "type":"image/png",
+            "sizes":"540x720"
+        }
+    ],
+    "shortcuts":[
+        {
+            "name":"lista",
+            "short_name":"lista",
+            "description":"lista dei prodotti",
+            "url":"/list.php",
+            "icons":[
+                {
+                    "src":"/images/shortcuts/list.png",
+                    "sizes":"192x192"
+                }
+            ]
+        },
+        {
+            "name":"dettagli",
+            "short_name":"dettagli",
+            "description":"scheda prodotto",
+            "url":"/details.php",
+            "icons":[
+                {
+                    "src":"/images/shortcuts/details.png",
+                    "sizes":"192x192"
+                }
+            ]
+        }
     ]
+    
 }
