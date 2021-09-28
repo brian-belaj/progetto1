@@ -1,6 +1,8 @@
 <!doctype html>
 <html lang="en">
-  <?php require 'partials/head.php'?>
+
+<?php require 'partials/head.php'?>
+
   <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary flex-wrap">
@@ -225,6 +227,5 @@
         </div>
     </footer>
     <?php require 'partials/script.php'?>
-
   </body>
 </html> 

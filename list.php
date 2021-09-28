@@ -1,8 +1,9 @@
 <!doctype html>
 <html lang="en">
+
 <?php require 'partials/head.php'?>
 
-  <body>
+<body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary flex-wrap">
             <div class="container">
@@ -353,7 +354,7 @@
             <!-- ShareThis BEGIN --><div class="mt-5 sharethis-inline-share-buttons"></div><!-- ShareThis END -->
         </div>
     </footer>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
     <?php require 'partials/script.php'?>
-
   </body>
 </html> 

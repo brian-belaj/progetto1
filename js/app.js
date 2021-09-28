@@ -8,29 +8,32 @@ if('serviceWorker' in navigator){
     });
 }
 
-var deferredprompt;
+var deferredPrompt;
 window.addEventListener("beforeinstallprompt", function(event){
     event.preventDefault();
-    console.log("intercettato evento di installazione");
-    deferredprompt=event;
+    console.log("intercettato evento installazione");
+    deferredPrompt = event;
     return false;
 });
-var buttons = document.querySelectorAll(".btn-primary");
-for (var index; index<buttons.length; index++){
-    buttons[index].addEventListener("click", function(event){
+
+var btn = document.querySelectorAll(".btn");
+for (var i = 0; i<btn.length; i++){
+    btn[i].addEventListener("click", function(event){
         event.preventDefault();
-        if(deferredprompt){
-            deferredprompt.prompt();
-            deferredprompt.userChoice.then(
-                function(choiceresult){
-                    if(choiceresult.outcome === "dismissed"){
-                        console.log("l'utente ha annullato l'installazione");
-                    } else {
-                        console.log("l'utente ha installato l'app");
-                    }
-                    window.location.href=event.target.getAttribute("href");
-                })
-            deferredprompt=null;
+        if(deferredPrompt){
+            deferredPrompt.prompt();
+            deferredPrompt.userChoice.then(function(choiceResult){
+                if(choiceResult.outcome === "dismissed"){
+                    console.log("nope");
+                }
+                else{
+                    console.log("FUCKYEAH");
+                }
+                window.location.href= event.target.getAttribute(href);
+            });
+            deferredPrompt = null;
+        } else {
+            window.location.href= event.target.getAttribute(href);
         }
     });
 }

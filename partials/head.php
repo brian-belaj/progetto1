@@ -1,6 +1,5 @@
-<head>
-      
-<link rel="manifest" href="/manifest.json">
+<head>    
+    <link rel="manifest" href="/manifest.json">
 
 
     <!-- Required meta tags -->
@@ -13,9 +12,9 @@
     <title>ProvaGit</title>
     <meta name="theme-color" content="#ff99cc">
     <link rel="apple-touch-icon" href="/images/icons/icon-512x512.png">
-    <meta name="msapplication-TailColor" content="#ff99cc">
+    <meta name="msapplication-TileColor" content="#ff99cc">
     <meta name="msapplication-TileImage" content="/images/icons/icon-144x144.png">
     <meta name="apple-mobile-web-app-title" content="pwa">
     <meta name="apple-mobile-web-app-status-bar" content="#ff99cc">
     <meta name="apple-mobile-web-app-capable" content="yes">
-  </head>
+</head>

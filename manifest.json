@@ -1,7 +1,7 @@
 {
     "name": "esercizio metaphora pwa",
     "short_name": "pwa",
-    "scope":"/",
+    "scope": "/",
     "start_url": "/index.php",
     "orientation": "portrait",
     "display": "standalone",
@@ -20,48 +20,47 @@
             "purpose": "maskable any"
         }
     ],
-    "screenshots":[
+    "screenshots": [
         {
-            "src":"/images/screenshots/image1.png",
-            "type":"image/png",
-            "sizes":"540x720"
+            "src": "/images/screenshots/1.png",
+            "sizes": "540x720",
+            "type": "image/png"
         },
         {
-            "src":"/images/screenshots/image2.png",
-            "type":"image/png",
-            "sizes":"540x720"
+            "src": "/images/screenshots/2.png",
+            "sizes": "540x720",
+            "type": "image/png"
         },
         {
-            "src":"/images/screenshots/image3.png",
-            "type":"image/png",
-            "sizes":"540x720"
+            "src": "/images/screenshots/3.png",
+            "sizes": "540x720",
+            "type": "image/png"
         }
     ],
-    "shortcuts":[
+    "shortcuts": [
         {
-            "name":"lista",
-            "short_name":"lista",
-            "description":"lista dei prodotti",
-            "url":"/list.php",
-            "icons":[
+            "name": "lista",
+            "short_name": "lista",
+            "description": "lista prodotti",
+            "url": "/list.php",
+            "icons": [
                 {
-                    "src":"/images/shortcuts/list.png",
-                    "sizes":"192x192"
+                    "src": "/images/shotcuts/list.png",
+                    "sizes": "192x192"
                 }
             ]
         },
         {
-            "name":"dettagli",
-            "short_name":"dettagli",
-            "description":"scheda prodotto",
-            "url":"/details.php",
-            "icons":[
+            "name": "details",
+            "short_name": "details",
+            "description": "dettagli",
+            "url": "/details.php",
+            "icons": [
                 {
-                    "src":"/images/shortcuts/details.png",
-                    "sizes":"192x192"
+                    "src": "/images/shotcuts/details.png",
+                    "sizes": "192x192"
                 }
             ]
         }
     ]
-    
 }
