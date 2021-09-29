@@ -1,17 +1,17 @@
 <!doctype html>
 <html lang="en">
 
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
-    <title>Hello, world!</title>
-</head>
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+        <title>Hello, world!</title>
+    </head>
 
 <body>
     <header>
@@ -35,7 +35,7 @@
 
                 <a href="#" class="px-1 h4 text-white d-none d-lg-inline-block"><i class="bi bi-person-fill"></i></a>
                 <a href="#" class="d-inline-block px-1 h4 text-white"><i class="bi bi-basket-fill"></i></a>
-                <a href="#" class="px-1 h4 text-white d-none d-lg-inline-block" onclick="redirectSearchPage()"><i class="bi bi-search"></i></a>
+                <a href="/listaRicerca.php" class="px-1 h4 text-white d-none d-lg-inline-block"><i class="bi bi-search"></i></a>
                 <div class="w-100 collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto">
                         <li class="nav-item">
@@ -60,7 +60,7 @@
                             <a class="nav-link" href="#">Link 6</a>
                         </li>
                         <li class="nav-item d-list-item d-lg-none">
-                            <a href="#" class="px-1 h4 text-white" onclick="redirectSearchPage()"><i class="bi bi-search"></i></a>
+                            <a href="/listaRicerca.php" class="px-1 h4 text-white"><i class="bi bi-search"></i></a>
                             <a href="#" class="px-1 h4 text-white"><i class="bi bi-person-fill"></i></a>
                         </li>
                     </ul>
@@ -150,18 +150,8 @@
             </div>
         </footer>
         <!-- Option 1: Bootstrap Bundle with Popper -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
-            crossorigin="anonymous"></script>
-
-        <script type="text/javascript"
-            src="https://platform-api.sharethis.com/js/sharethis.js#property=61309f70a855ee0013f55721&product=sop"
-            async="async"></script>
-            <script type="text/javascript">
-        const redirectSearchPage = () => {
-            window.location.href = './listaRicerca.php'
-        };
-        </script>
+        <?php require 'partials/script.php'?>
+    
     </body>
 
 </html>
