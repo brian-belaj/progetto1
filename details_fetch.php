@@ -35,7 +35,7 @@
 
                 <a href="#" class="px-1 h4 text-white d-none d-lg-inline-block"><i class="bi bi-person-fill"></i></a>
                 <a href="#" class="d-inline-block px-1 h4 text-white"><i class="bi bi-basket-fill"></i></a>
-                <a href="#" class="px-1 h4 text-white d-none d-lg-inline-block"><i class="bi bi-search"></i></a>
+                <a href="#" class="px-1 h4 text-white d-none d-lg-inline-block" onclick="redirectSearchPage()"><i class="bi bi-search"></i></a>
                 <div class="w-100 collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto">
                         <li class="nav-item">
@@ -60,7 +60,7 @@
                             <a class="nav-link" href="#">Link 6</a>
                         </li>
                         <li class="nav-item d-list-item d-lg-none">
-                            <a href="#" class="px-1 h4 text-white"><i class="bi bi-search"></i></a>
+                            <a href="#" class="px-1 h4 text-white" onclick="redirectSearchPage()"><i class="bi bi-search"></i></a>
                             <a href="#" class="px-1 h4 text-white"><i class="bi bi-person-fill"></i></a>
                         </li>
                     </ul>
@@ -158,6 +158,10 @@
         src="https://platform-api.sharethis.com/js/sharethis.js#property=61309f70a855ee0013f55721&product=sop"
         async="async"></script>
     <script type="text/javascript">
+        const redirectSearchPage = () => {
+            window.location.href = './listaRicerca.php'
+        };
+
         fetch("article.json")
             .then(function (response) {
                 return response.json();
@@ -177,26 +181,26 @@
                     let html = `                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner mb-2">
                             <div class="carousel-item active">
-                                <img src="${article.immagini}" class="d-block w-100" alt="...">
+                                <img src="https://picsum.photos/635/400/?random&t=1" class="d-block w-100" alt="...">
                             </div>
                             <div class="carousel-item">
-                                <img src="${article.immagini}" class="d-block w-100" alt="...">
+                                <img src="https://picsum.photos/635/400/?random&t=2" class="d-block w-100" alt="...">
                             </div>
                             <div class="carousel-item">
-                                <img src="${article.immagini}" class="d-block w-100" alt="...">
+                                <img src="https://picsum.photos/635/400/?random&t=3" class="d-block w-100" alt="...">
                             </div>
                         </div>
                         <div class="d-flex flex-row">
                             <a data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active me-2"
                                 aria-current="true" aria-label="Slide 1">
-                                <img src="${article.immagini}" class="d-block w-100" alt="...">
+                                <img src="https://picsum.photos/635/400/?random&t=1" class="d-block w-100" alt="...">
                             </a>
                             <a data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"
                                 class="me-2">
-                                <img src="${article.immagini}" class="d-block w-100" alt="...">
+                                <img src="https://picsum.photos/635/400/?random&t=2" class="d-block w-100" alt="...">
                             </a>
                             <a data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"">
-                                    <img src=" ${article.immagini}" class="d-block w-100"
+                                    <img src=" https://picsum.photos/635/400/?random&t=3" class="d-block w-100"
                                 alt="...">
                             </a>
                         </div>
@@ -204,13 +208,9 @@
                     
                     return html
                 };
-               
-          }
-          
-        })
-        .catch((error) => alert(error.message));
-                
-            
+               templatehtmlphotogallery(result.articolo)
+            })
+            .catch((error) => alert(error.message));
     </script>
 </body>
 
