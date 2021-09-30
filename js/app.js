@@ -54,3 +54,18 @@ cancel_button.addEventListener("click",function(event){
 
 });
 
+var customerbtn=document.getElementById("srcBtn");
+var login_container=document.getElementById("srcBar");
+var cancel_button=document.getElementById("cancelSrc-btn");
+
+customerbtn.addEventListener("click",function(event){
+    login_container.classList.add("srcBar-show");
+
+
+});
+cancel_button.addEventListener("click",function(event){
+    login_container.classList.remove("srcBar-show");
+
+
+});
+

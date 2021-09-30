@@ -5,6 +5,7 @@ self.addEventListener('install', function(event){
         .then(function(cache){
             cache.add("/")
             cache.add("/index.php");
+            cache.add("/offline.php");
             cache.add("/favicon.ico");
             cache.add("/styles/style.css");
             cache.add("/js/app.js");
@@ -41,5 +42,11 @@ self.addEventListener('fetch', function(event){
                )
             }
        })
+       .catch(function (err) {
+        return caches.open("static")
+            .then(function (cache) {
+                return cache.match('/offline.php');
+            });
+    })
    )
 });
