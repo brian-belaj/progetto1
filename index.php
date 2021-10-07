@@ -129,11 +129,22 @@
                 Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
             </div>
         </section>
+        
+        <section class="mt-5 container">
+            <picture>
+                <img src="/images/immagini/IMG_4170.jpg" class="d-block w-100" alt="...">
+            </picture>
+        </section>
+        <section class="mt-5 container">
+            <div class="text-center mx-5 h4">
+                Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
+            </div>
+        </section>
         <section class="mt-5 container">
             <div class="row">
                 <article class="col-6 col-lg-3">
                     <div class="card border-0">
-                        <img src="https://picsum.photos/265/263/?random&t=<?php echo rand() ?>" class="card-img-top"
+                        <img src="/images/immagini/IMG_4175.jpg" class="card-img-top"
                             alt="...">
                         <div class="card-body px-0">
                             <h5 class="card-title">Card title</h5>
@@ -149,7 +160,7 @@
 
                 <article class="col-6 col-lg-3">
                     <div class="card border-0">
-                        <img src="https://picsum.photos/265/263/?random&t=<?php echo rand() ?>" class="card-img-top"
+                        <img src="/images/immagini/IMG_4175.jpg" class="card-img-top"
                             alt="...">
                         <div class="card-body px-0">
                             <h5 class="card-title">Card title</h5>
@@ -165,7 +176,7 @@
 
                 <article class="col-6 col-lg-3">
                     <div class="card border-0">
-                        <img src="https://picsum.photos/265/263/?random&t=<?php echo rand() ?>" class="card-img-top"
+                        <img src="/images/immagini/IMG_4175.jpg" class="card-img-top"
                             alt="...">
                         <div class="card-body px-0">
                             <h5 class="card-title">Card title</h5>
@@ -181,7 +192,7 @@
 
                 <article class="col-6 col-lg-3">
                     <div class="card border-0">
-                        <img src="https://picsum.photos/265/263/?random&t=<?php echo rand() ?>" class="card-img-top"
+                        <img src="/images/immagini/IMG_4175.jpg" class="card-img-top"
                             alt="...">
                         <div class="card-body px-0">
                             <h5 class="card-title">Card title</h5>
