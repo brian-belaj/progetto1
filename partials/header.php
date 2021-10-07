@@ -83,7 +83,8 @@
                 let navigationMenuList = document.getElementById("navbarList");
                 let nuovohtml = "";
                 
-                for (navData of navDataObj.navigationData) {
+                console.log(navDataObj.navigationData);
+                for (const navData of navDataObj.navigationData) {
                     nuovohtml+=templatehtml(navData);
                 }
                 navigationMenuList.innerHTML= nuovohtml;
@@ -98,9 +99,10 @@
                             navClass = 'active';
                         }
                     } else {
-                        if(navData.titolo = 'Home')
+                        if(navData.titolo == 'Home')
                             navClass = 'active';
                     }
+                    console.log(navData);
                     let html = `
                     <li class="nav-item">
                         <a class="nav-link ${navClass}" href="/${navData.url}">${navData.titolo}</a>
