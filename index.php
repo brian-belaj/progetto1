@@ -74,7 +74,7 @@
         </section>
         <section class="mt-5 container">
             <article class="row gx-0">
-                <div class="col-12 col-lg-6"><img src="https://picsum.photos/635/400/?random&t=<?php echo rand() ?>"
+                <div class="col-12 col-lg-6"><img src="/images/immagini/IMG_4155.jpg"
                         class="d-block w-100" alt="..."></div>
                 <div class="col-12 col-lg-6">
                     <section class="p-3">
@@ -113,7 +113,7 @@
                         </a>
                     </section>
                 </div>
-                <div class="col-12 col-lg-6"><img src="https://picsum.photos/635/400/?random&t=<?php echo rand() ?>"
+                <div class="col-12 col-lg-6"><img src="/images/immagini/IMG_4155a.jpg"
                         class="d-block w-100" alt="..."></div>
             </article>
         </section>
