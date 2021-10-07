@@ -69,7 +69,7 @@
         </section>
         <section class="mt-3 container">
             <div class="text-center mx-5 h4">
-                Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
+                <?php echo 'Integer posuere erat a ante venenatis dapibus posuere velit aliquet.' ?>
             </div>
         </section>
         <section class="mt-5 container">
@@ -117,22 +117,10 @@
                         class="d-block w-100" alt="..."></div>
             </article>
         </section>
-        <section class="mt-5 container">
-            <picture>
-                <source srcset="https://picsum.photos/1270/116/?random&t=<?php echo rand() ?>"
-                    media="(min-width: 992px)">
-                <img src="https://picsum.photos/360/116/?random&t=<?php echo rand() ?>" class="d-block w-100" alt="...">
-            </picture>
-        </section>
-        <section class="mt-5 container">
-            <div class="text-center mx-5 h4">
-                Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
-            </div>
-        </section>
         
         <section class="mt-5 container">
             <picture>
-                <img src="/images/immagini/IMG_4170.jpg" class="d-block w-100" alt="...">
+                <img src="/images/immagini/IMG_4170.jpg"  class="d-block w-100" alt="...">
             </picture>
         </section>
         <section class="mt-5 container">
@@ -177,7 +165,7 @@
                 <article class="col-6 col-lg-3">
                     <div class="card border-0">
                         <img src="/images/immagini/IMG_4175.jpg" class="card-img-top"
-                            alt="...">
+                            alt="..." >
                         <div class="card-body px-0">
                             <h5 class="card-title">Card title</h5>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk
