@@ -7,72 +7,12 @@
     <!-- header from partials -->
     <?php require 'partials/header.php'?>
 
-    <div class="container" id="login_container">
-        <div class="row">
-            <form>
-                <h2>Login</h2>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" class="form-control" id="email" placeholder="Inserisci la tua email">
-                </div>
-                <div class="form-group password-input">
-                    <label for="password">Password</label>
-                    <input type="password" class="form-control" id="password" placeholder="Inserisci la tua password">
-                </div>
-                <button type="submit" class="btn btn-dark">Login</button>
-                <button class="btn btn-secondary" id="cancel-btn">Annulla</button>
-            </form>
-        </div>
-    </div>
 
-    <div class="container" id="srcBar">
-        <div class="row">
-            <form action="list.php" method="get">
-                <h2>Cosa Cerchi?</h2>
-
-                <input id="articleName" type="text" name="src_bar" class="form-control" placeholder="Input Text here..." aria-label="Recipient's username" aria-describedby="button-addon2">
-                <button class="btn btn-outline-secondary" type="submit">Search</button>
-
-                <button class="btn btn-secondary" id="cancelSrc-btn">Annulla</button>
-            </form>
-        </div>
-    </div>
 
     <main>
-        <section class="mt-4">
-            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <picture>
-                            <img src="/images/immagini/IMG_4139.jpg"
-                                class="d-block w-100" alt="...">
-                        </picture>
-                    </div>
-                    <div class="carousel-item">
-                        <picture>
-                            <img src="/images/immagini/IMG_4139a.jpg"
-                                class="d-block w-100" alt="...">
-                        </picture>
-                    </div>
-                    <div class="carousel-item">
-                        <picture>
-                            <img src="/images/immagini/IMG_4139b.jpg"
-                                class="d-block w-100" alt="...">
-                        </picture>
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-            </div>
-        </section>
+        
+        <?php require'partials/carousel.php'?>
+
         <section class="mt-3 container">
             <div class="text-center mx-5 h4">
                 Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
