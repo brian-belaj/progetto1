@@ -3,8 +3,7 @@
 error_reporting(-1);
 $website_texts = [
     'it' => [
-        'title' => 'Corso Metaphora'
-        'title' => 'Corso Metaphora italiano',
+        'title' => 'Corso Metaphora',
         'text_h1' => 'questo è il testo dell\' h1',
     ],
     'en' => [
@@ -24,8 +23,8 @@ $menu = [
   define('WEBSITE_MENU', $menu);
 
   $carousel_home = [
-      ['src' => 'images/static_assets/IMG_4139.JPG', 'alt' => 'Immagine 1'],
-      ['src' => 'images/static_assets/IMG_4140.JPG', 'alt' => 'Immagine 2'],
-      ['src' => 'images/static_assets/IMG_4155.JPG', 'alt' => 'Immagine 3'],
-      ['src' => 'images/static_assets/IMG_4170.JPG', 'alt' => 'Immagine 4']
+      ['src' => 'images/immagini/IMG_4139.JPG', 'alt' => 'Immagine 1'],
+      ['src' => 'images/immagini/IMG_4140.JPG', 'alt' => 'Immagine 2'],
+      ['src' => 'images/immagini/IMG_4155.JPG', 'alt' => 'Immagine 3'],
+      ['src' => 'images/immagini/IMG_4170.JPG', 'alt' => 'Immagine 4']
   ];

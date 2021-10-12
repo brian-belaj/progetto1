@@ -15,7 +15,7 @@
 
         <section class="mt-3 container">
             <div class="text-center mx-5 h4">
-                Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
+                <?php echo __('text_h1') ?>
             </div>
         </section>
         <section class="mt-5 container">
