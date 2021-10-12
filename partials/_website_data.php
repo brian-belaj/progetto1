@@ -28,3 +28,7 @@ $menu = [
       ['src' => 'images/immagini/IMG_4155.JPG', 'alt' => 'Immagine 3'],
       ['src' => 'images/immagini/IMG_4170.JPG', 'alt' => 'Immagine 4']
   ];
+
+  $news =[
+      ['immagine' => 'images/immagini/IMG_4155.JPG', 'alt' => 'immagine 1', ],
+  ]
