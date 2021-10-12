@@ -2,6 +2,9 @@
     <link rel="manifest" href="/manifest.json">
     <link rel="stylesheet" href="/styles/style.css">
 
+    <?php require '_website_data.php'?>
+    <?php require '_functions.php'?>    
+
 
     <!-- Required meta tags -->
     <meta charset="utf-8">
