@@ -41,12 +41,7 @@
       <div class="w-100 collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto" id="navbarList">
           <?php
-            $menu = [
-              ["titolo" => "Home", "url" => "index.php"],
-              ["titolo" => "List", "url" => "list.php"],
-              ["titolo" => "Details", "url" => "details.php"]
-            ];
-            foreach ($menu as $voce_menu) {
+            foreach (WEBSITE_MENU as $voce_menu) {
               echo '<li class="nav-item h3"><a class="nav-link" href="' . $voce_menu['url'] . '">' . $voce_menu['titolo'] . '</a></li>';
             }
           ?>
