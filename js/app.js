@@ -42,12 +42,13 @@ var customerbtn=document.getElementById("customer-btn");
 var login_container=document.getElementById("login_container");
 var cancel_button=document.getElementById("cancel-btn");
 
+/*
 customerbtn.addEventListener("click",function(event){
     console.log("ho cliccato sul customerbtn");
     login_container.classList.add("login-form-show");
-
-
 });
+*/
+
 cancel_button.addEventListener("click",function(event){
     login_container.classList.remove("login-form-show");
 
