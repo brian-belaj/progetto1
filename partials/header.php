@@ -1,7 +1,7 @@
 <header>
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary flex-wrap">
     <div class="container relative">
-
+  
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
               data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
               aria-expanded="false" aria-label="Toggle navigation">
@@ -20,7 +20,7 @@
 
       <div>
         <div>
-          <a href="#" class="px-1 h4 text-white d-none d-lg-inline-block"><i class="bi bi-person-fill"></i></a>
+          <a href="#" class="px-1 h4 text-white d-none d-lg-inline-block" id="customer-btn"><i class="bi bi-person-fill"></i></a>
           <a href="#" class="d-inline-block px-1 h4 text-white"><i class="bi bi-basket-fill"></i></a>
           <a href="#" class="px-1 h4 text-white d-none d-lg-inline-block" id="researchBut" onclick="animateSearchForm()"><i class="bi bi-search"></i></a>
         </div>
