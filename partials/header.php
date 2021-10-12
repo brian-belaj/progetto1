@@ -1,7 +1,7 @@
 <header>
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary flex-wrap">
     <div class="container relative">
-
+  
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
               data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
               aria-expanded="false" aria-label="Toggle navigation">
@@ -20,7 +20,7 @@
 
       <div>
         <div>
-          <a href="#" class="px-1 h4 text-white d-none d-lg-inline-block"><i class="bi bi-person-fill"></i></a>
+          <a href="#" class="px-1 h4 text-white d-none d-lg-inline-block" id="customer-btn"><i class="bi bi-person-fill"></i></a>
           <a href="#" class="d-inline-block px-1 h4 text-white"><i class="bi bi-basket-fill"></i></a>
           <a href="#" class="px-1 h4 text-white d-none d-lg-inline-block" id="researchBut" onclick="animateSearchForm()"><i class="bi bi-search"></i></a>
         </div>
@@ -41,12 +41,7 @@
       <div class="w-100 collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto" id="navbarList">
           <?php
-            $menu = [
-              ["titolo" => "Home", "url" => "index.php"],
-              ["titolo" => "List", "url" => "list.php"],
-              ["titolo" => "Details", "url" => "details.php"]
-            ];
-            foreach ($menu as $voce_menu) {
+            foreach (WEBSITE_MENU as $voce_menu) {
               echo '<li class="nav-item h3"><a class="nav-link" href="' . $voce_menu['url'] . '">' . $voce_menu['titolo'] . '</a></li>';
             }
           ?>
