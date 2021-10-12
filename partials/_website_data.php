@@ -2,10 +2,12 @@
 error_reporting(-1);
 $website_texts = [
     'it' => [
+        'readmore' => 'Read More',
         'title' => 'Corso Metaphora italiano',
         'text_h1' => 'questo è il testo dell\' h1',
     ],
     'en' => [
+        'readmore' => 'Read More',
         'title' => 'Metaphora inglese',
         'text_h1' => 'Questo è il  dell\' h1',
     ]
@@ -33,8 +35,8 @@ $menu = [
   $news = [
       ['immagine' => '/images/immagini/IMG_4155a.jpg', 'alt' => 'Immagine1', 'titolo' => 'Titolo 1', 'testo' => 'Testo 1 eccetera', 'data' => 'Data1'],
       ['immagine' => '/images/immagini/IMG_4155.jpg', 'alt' => 'Immagine2', 'titolo' => 'Titolo 2', 'testo' => 'Testo 2 eccetera', 'data' => 'Data2'],
-      ['immagine' => '/images/immagini/IMG_4155a.jpg', 'alt' => 'Immagine1', 'titolo' => 'Titolo 1', 'testo' => 'Testo 1 eccetera', 'data' => 'Data1'],
-      ['immagine' => '/images/immagini/IMG_4155a.jpg', 'alt' => 'Immagine1', 'titolo' => 'Titolo 1', 'testo' => 'Testo 1 eccetera', 'data' => 'Data1']
+      ['immagine' => '/images/immagini/IMG_4155a.jpg', 'alt' => 'Immagine1', 'titolo' => 'Titolo 3', 'testo' => 'Testo 3 eccetera', 'data' => 'Data3'],
+      ['immagine' => '/images/immagini/IMG_4155a.jpg', 'alt' => 'Immagine1', 'titolo' => 'Titolo 4', 'testo' => 'Testo 4 eccetera', 'data' => 'Data4']
   ];
 
   define('NEWS', $news);
