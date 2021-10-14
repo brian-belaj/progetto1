@@ -1,5 +1,6 @@
 <?php
 error_reporting(-1);
+
 $website_texts = [
     'it' => [
         'readmore' => 'Read More',
@@ -15,12 +16,18 @@ $website_texts = [
 ];
 define('WEBSITE_TEXTS', $website_texts);
 
+
+$sth = $pdo->prepare("SELECT * FROM navigation_menu");
+$sth->execute();
+
+$menu = $sth->fetchAll(\PDO::FETCH_ASSOC);
+
+/*
 $menu = [
     ["titolo" => "Home", "url" => "index.php"],
     ["titolo" => "List", "url" => "list.php"],
     ["titolo" => "Details", "url" => "details.php"]
-];
-
+];*/
 
 define('WEBSITE_MENU', $menu);
 
@@ -30,7 +37,6 @@ $carousel_home = [
     ['src' => 'images/static_assets/IMG_4155.JPG', 'alt' => 'Immagine 3'],
     ['src' => 'images/static_assets/IMG_4170.JPG', 'alt' => 'Immagine 4']
 ];
-
 
 
 $news = [
