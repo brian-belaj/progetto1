@@ -23,7 +23,6 @@ $menu = [
     ["titolo" => "Details", "url" => "details.php"],
   ];
 
-
   define('WEBSITE_MENU', $menu);
 
   $carousel_home = [

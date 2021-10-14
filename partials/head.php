@@ -2,6 +2,7 @@
     <link rel="manifest" href="/manifest.json">
     <link rel="stylesheet" href="/styles/style.css">
 
+    <?php require 'db_connection.php'?>
     <?php require '_website_data.php'?>
     <?php require '_functions.php'?>    
 
