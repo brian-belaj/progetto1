@@ -17,6 +17,12 @@ $website_texts = [
 ];
 define('WEBSITE_TEXTS', $website_texts);
 
+$sth = $pdo ->prepare("SELECT * FROM navigation_menu");
+$sth ->execute();
+
+$results = $sth -> fetchall(\PDO::FETCH_ASSOC);
+
+
 $menu = [
     ["titolo" => "Home", "url" => "index.php"],
     ["titolo" => "List", "url" => "list.php"],
