@@ -17,7 +17,7 @@ $website_texts = [
 define('WEBSITE_TEXTS', $website_texts);
 
 
-$sth = $pdo->prepare("SELECT * FROM navigation_menu");
+$sth = $pdo->prepare("SELECT * FROM navigation_menu ORDER BY ordine");
 $sth->execute();
 
 $menu = $sth->fetchAll(\PDO::FETCH_ASSOC);
