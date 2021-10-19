@@ -74,3 +74,13 @@ $sth->execute();
 $articles = $sth->fetchAll(\PDO::FETCH_ASSOC);
 
 define('ARTICLES', $articles);
+
+
+/* ARTICLE LIST */ 
+
+$sth = $pdo->prepare("SELECT * FROM article_list");
+$sth->execute();
+
+$article_list = $sth->fetchAll(\PDO::FETCH_ASSOC);
+
+define('ARTICLELIST', $article_list);
