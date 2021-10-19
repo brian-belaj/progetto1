@@ -75,6 +75,7 @@
                     </div>
                 </article>
 
+<<<<<<< Updated upstream
                 <article class="col-6 col-lg-3">
                     <div class="card border-0">
                         <img src="/images/immagini/IMG_4175.jpg" class="card-img-top"
@@ -93,4 +94,25 @@
             </div>
         </section>
     </main>
+=======
+    <section class="mt-5 container">
+        <picture>
+            <img src="/images/immagini/IMG_4170.jpg" class="d-block w-100" alt="...">
+        </picture>
+    </section>
+    <section class="mt-5 container">
+        <div class="text-center mx-5 h4">
+            <?php echo __('intro') ?>
+        </div>
+    </section>
+    <section class="mt-5 container">
+        <div class="row">
+ <!-- --------------------------------------- -->
+<?php require('partials/_article.php') ?>
+ <!-- --------------------------------------- -->
+ 
+        </div>
+    </section>
+</main>
+>>>>>>> Stashed changes
 <?php require('partials/_footer.php') ?>
