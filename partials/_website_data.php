@@ -70,7 +70,7 @@ $article_home = $sth->fetchAll(\PDO::FETCH_ASSOC);
 define('ARTICLES', $articles);*/
 
 /**DETAIL*******************************/
-$sth = $pdo->prepare("SELECT * FROM details_immagini WHERE attivo=1 ORDER BY ordine");
+/*$sth = $pdo->prepare("SELECT * FROM details_immagini WHERE attivo=1 ORDER BY ordine");
 $sth->execute();
 
 $details_img = $sth->fetchAll(\PDO::FETCH_ASSOC);

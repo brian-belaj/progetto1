@@ -2,17 +2,10 @@
     <?php if ($news_item['ordine'] % 2 == 0) : ?>
         <!-- non si può fare diversamente da ordine?-->
         <article class="row gx-0">
-<<<<<<< Updated upstream
-            <div class="col-12 col-lg-6"><img src="/images/immagini/IMG_4155.jpg" class="d-block w-100" alt="..."></div>
-            <div class="col-12 col-lg-6">
-                <section class="p-3">
-                    <caption>25 Agosto 2021</caption>
-=======
             <div class="col-12 col-lg-6"><img src="/images/news/<?php echo $news_item['img'] ?>" class="d-block w-100" alt="<?php echo $news_item['text_alt'] ?>"></div>
             <div class="col-12 col-lg-6">
                 <section class="p-3">
                     <caption><?php echo $news_item['data_news'] ?></caption>
->>>>>>> Stashed changes
                     <h4 class="mt-3">
                         Vestibulum id ligula porta felis euismod semper.
                     </h4>
@@ -33,11 +26,7 @@
         <article class="row gx-0">
             <div class="col-12 col-lg-6">
                 <section class="p-3">
-<<<<<<< Updated upstream
-                    <caption>20 Agosto 2021</caption>
-=======
                     <caption><?php echo $news_item['data_news'] ?></caption>
->>>>>>> Stashed changes
                     <h4 class="mt-3">
                         Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec
                         elit.
@@ -54,11 +43,7 @@
                     </a>
                 </section>
             </div>
-<<<<<<< Updated upstream
-            <div class="col-12 col-lg-6"><img src="/images/immagini/IMG_4155a.jpg" class="d-block w-100" alt="..."></div>
-=======
             <div class="col-12 col-lg-6"><img src="/images/news/<?php echo $news_item['img'] ?>" class="d-block w-100" alt="<?php echo $news_item['text_alt'] ?>"></div>
->>>>>>> Stashed changes
         </article>
 
     <?php endif ?>
