@@ -1,5 +1,11 @@
 <?php require('partials/_header_new.php') ?>
-
+<?php
+    if(!isset($article_detail)){
+        http_response_code(404);
+        require('partials/404.php');
+        die();
+    }
+?>
 <main>
     <section class="mt-5 container">
         <article class="row gx-0">
@@ -31,15 +37,11 @@
             </div>
             <div class="col-12 col-lg-6">
                 <section class="p-3">
-                    <caption>25 Agosto 2021</caption>
                     <h4 class="mt-3">
-                        Vestibulum id ligula porta felis euismod semper.
+                    <?php echo ARTICLEDETAIL['name']?>
                     </h4>
                     <p>
-                        Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum
-                        massa justo sit amet risus. Nullam id dolor id nibh ultricies vehicula ut id elit. Cras
-                        justo odio, dapibus ac facilisis in, egestas eget quam. Nulla vitae elit libero, a
-                        pharetra augue.
+                    <?php echo ARTICLEDETAIL['description']?>
                     </p>
                     <a class="btn btn-primary" href="/list.php">
                         Read More
