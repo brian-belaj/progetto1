@@ -12,26 +12,24 @@
             <div class="col-12 col-lg-6">
                 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner mb-2">
-                        <div class="carousel-item active">
-                            <img src="/images/immagini/IMG_4155.jpg" class="d-block w-100" alt="...">
+                    <?php $str_active = 'active'; ?>
+                    <?php foreach($articles_photos as $articles_photo):?>
+                        <div class="carousel-item <?php echo $str_active ?>">
+                            <img src="<?php echo $articles_photo['url']?>" class="d-block w-100" alt="<?php echo $articles_photo['alt_text']?>">
                         </div>
-                        <div class="carousel-item">
-                            <img src="/images/immagini/IMG_4155a.jpg" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="/images/immagini/IMG_4155.jpg" class="d-block w-100" alt="...">
-                        </div>
+                        <?php $str_active = ''; ?>
+                    <?php endforeach?>
                     </div>
                     <div class="d-flex flex-row">
-                        <a data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active me-2" aria-current="true" aria-label="Slide 1">
-                            <img src="/images/immagini/IMG_4155.jpg" class="d-block w-100" alt="...">
+                    <?php $counter = 0; ?>
+                    <?php foreach($articles_photos as $articles_photo):?>
+                        <a data-bs-target="#carouselExampleIndicators" data-bs-slide-to="<?php echo $counter?>" class="<?php echo $str_active ?> me-2" aria-current="true" aria-label="Slide 1">
+                            <img src="<?php echo $articles_photo['url']?>" class="d-block w-100" alt="...">
                         </a>
-                        <a data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2" class="me-2">
-                            <img src="/images/immagini/IMG_4155a.jpg" class="d-block w-100" alt="...">
-                        </a>
-                        <a data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"">
-                                    <img src=" /images/immagini/IMG_4155.jpg" class="d-block w-100" alt="...">
-                        </a>
+                    <?php $counter++;?>
+                    <?php $str_active = ''; ?>
+
+                    <?php endforeach?>
                     </div>
                 </div>
             </div>

@@ -95,5 +95,11 @@ if(isset($_GET['article_id'])){
     $article_detail = $sth->fetch(\PDO::FETCH_ASSOC);
 
     define('ARTICLEDETAIL', $article_detail);
+
+    $sth = $pdo->prepare("SELECT * FROM articles_photo WHERE article_id = $article_id");
+    $sth->execute();
+
+    $articles_photos = $sth->fetchall(\PDO::FETCH_ASSOC);
+
 //var_dump(ARTICLEDETAIL);
 }
