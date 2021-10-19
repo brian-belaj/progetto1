@@ -2,7 +2,7 @@
 
 <main>
     <!-- -->
-    <?php require('partials/_carousel.php') ?>
+    <?php require('partials/carousel.php') ?>
     <section class="mt-3 container">
         <div class="text-center mx-5 h4">
             <?php echo __('text_h1') ?>
@@ -27,13 +27,13 @@
     </section>
     <section class="mt-5 container">
         <div class="row">
-            <?php foreach (ARTICLES as $article) : ?>
+            <?php foreach (ARTICLES as $articles_item) : ?>
                 <article class="col-6 col-lg-3">
                     <div class="card border-0">
-                        <img src="<?php echo $article['immagine'] ?>" class="card-img-top" alt="<?php echo $article['alt'] ?>">
+                        <img src="<?php echo $articles_item['immagine'] ?>" class="card-img-top" alt="<?php echo $articles_item['alt'] ?>">
                         <div class="card-body px-0">
-                            <h5 class="card-title"><?php echo $article['titolo'] ?></h5>
-                            <p class="card-text"><?php echo $article['testo'] ?></p>
+                            <h5 class="card-title"><?php echo $articles_item['titolo'] ?></h5>
+                            <p class="card-text"><?php echo $articles_item['testo'] ?></p>
                             <div class="d-flex">
                                 <a href="/details.php" class="flex-fill btn btn-primary">Info</a>
                                 <a href="#" class="btn btn-primary ms-3"><i class="bi bi-bag-plus-fill"></i></a>

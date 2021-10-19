@@ -3,10 +3,10 @@
 <?php foreach (NEWS as $news_item) : ?>
     <?php if ($conta % 2 == 0) : ?>
         <article class="row gx-0">
-            <div class="col-12 col-lg-6"><img src="<?php echo $news_item['immagine'] ?>" class="d-block w-100" alt="<?php echo $news_item['alt'] ?>"></div>
+            <div class="col-12 col-lg-6"><img src="/images/immagini/<?php echo $news_item['immagine'] ?>" class="d-block w-100" alt="<?php echo $news_item['alt'] ?>"></div>
             <div class="col-12 col-lg-6">
                 <section class="p-3">
-                    <caption><?php echo $news_item['data'] ?></caption>
+                    <caption><?php echo $news_item['data_inserimento'] ?></caption>
                     <h4 class="mt-3">
                         <?php echo $news_item['titolo'] ?>
                     </h4>
@@ -25,7 +25,7 @@
         <article class="row gx-0">
             <div class="col-12 col-lg-6">
                 <section class="p-3">
-                    <caption><?php echo $news_item['data'] ?></caption>
+                    <caption><?php echo $news_item['data_inserimento'] ?></caption>
                     <h4 class="mt-3">
                         <?php echo $news_item['titolo'] ?>
                     </h4>
@@ -37,7 +37,7 @@
                     </a>
                 </section>
             </div>
-            <div class="col-12 col-lg-6"><img src="<?php echo $news_item['immagine'] ?>" class="d-block w-100" alt="<?php echo $news_item['alt'] ?>"></div>
+            <div class="col-12 col-lg-6"><img src="/images/immagini/<?php echo $news_item['immagine'] ?>" class="d-block w-100" alt="<?php echo $news_item['alt'] ?>"></div>
         </article>
 
     <?php endif ?>
