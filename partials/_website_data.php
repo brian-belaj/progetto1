@@ -4,11 +4,8 @@ $website_texts = [
     'it' => [
         'title' => 'Corso Metaphora italiano',
         'text_h1' => 'questo è il testo dell\' h1',
-<<<<<<< Updated upstream
-=======
         'intro' => 'Questa è l\'introduzione',
         'info' => 'More info...',
->>>>>>> Stashed changes
     ],
     'en' => [
         'title' => 'Metaphora inglese',
@@ -23,18 +20,6 @@ $menu = [
     ["titolo" => "Details", "url" => "details.php"]
   ];
 
-<<<<<<< Updated upstream
-
-  define('WEBSITE_MENU', $menu);
-
-  $carousel_home = [
-      ['src' => 'images/static_assets/IMG_4139.JPG', 'alt' => 'Immagine 1'],
-      ['src' => 'images/static_assets/IMG_4140.JPG', 'alt' => 'Immagine 2'],
-      ['src' => 'images/static_assets/IMG_4155.JPG', 'alt' => 'Immagine 3'],
-      ['src' => 'images/static_assets/IMG_4170.JPG', 'alt' => 'Immagine 4']
-  ];
-
-=======
 define('WEBSITE_MENU', $menu);
 /* nell'header.php */
 
@@ -72,20 +57,9 @@ define('NEWS', $news);*/
 
 $sth = $pdo->prepare("SELECT * FROM article WHERE attivo=1 ORDER BY ordine");
 $sth->execute();
->>>>>>> Stashed changes
 
 $article_home = $sth->fetchAll(\PDO::FETCH_ASSOC);
 
-<<<<<<< Updated upstream
-  $news = [
-      ['immagine' => '/images/immagini/IMG_4155a.jpg', 'alt' => 'Immagine1', 'titolo' => 'Titolo 1', 'testo' => 'Testo 1 eccetera', 'data' => 'Data1'],
-      ['immagine' => '/images/immagini/IMG_4155.jpg', 'alt' => 'Immagine2', 'titolo' => 'Titolo 2', 'testo' => 'Testo 2 eccetera', 'data' => 'Data2'],
-      ['immagine' => '/images/immagini/IMG_4155a.jpg', 'alt' => 'Immagine1', 'titolo' => 'Titolo 1', 'testo' => 'Testo 1 eccetera', 'data' => 'Data1'],
-      ['immagine' => '/images/immagini/IMG_4155a.jpg', 'alt' => 'Immagine1', 'titolo' => 'Titolo 1', 'testo' => 'Testo 1 eccetera', 'data' => 'Data1']
-  ];
-
-  define('NEWS', $news);
-=======
 /*$articles = [
     ['immagine' => '/images/immagini/IMG_4175.jpg', 'alt' => 'Immagine1', 'titolo' => 'Titolo 1', 'testo' => 'Testo 1 eccetera'],
     ['immagine' => '/images/immagini/IMG_4175.jpg', 'alt' => 'Immagine2', 'titolo' => 'Titolo 2', 'testo' => 'Testo 2 eccetera'],
@@ -130,4 +104,3 @@ $sth = $pdo->prepare("SELECT * FROM article_prova WHERE attivo=1 ORDER BY ordine
 $sth->execute();
 
 $article_prova_home = $sth->fetchAll(\PDO::FETCH_ASSOC);
->>>>>>> Stashed changes
