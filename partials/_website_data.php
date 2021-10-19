@@ -35,10 +35,6 @@ $sth = $pdo->prepare("SELECT * FROM carousel WHERE attivo=1 ORDER BY ordine");
 $sth->execute();
 $carousel_home = $sth->fetchAll(\PDO::FETCH_ASSOC);
 
-$sth = $pdo->prepare("SELECT * FROM carousel WHERE active=1 ORDER BY ordine");
-$sth->execute();
-
-$carousel_home = $sth->fetchAll(\PDO::FETCH_ASSOC);
 
 /*
 $carousel_home = [
@@ -77,26 +73,30 @@ $sth->execute();
 $articles = $sth->fetchAll(\PDO::FETCH_ASSOC);
 
 define('ARTICLES', $articles);
-*/
+
  
 
 /* ARTICLE LIST */ 
 
-$sth = $pdo->prepare("SELECT * FROM article");
+$sth = $pdo->prepare("SELECT * FROM articles");
 $sth->execute();
 
-$article_list = $sth->fetchAll(\PDO::FETCH_ASSOC);
+$articles_list = $sth->fetchAll(\PDO::FETCH_ASSOC);
 
-define('ARTICLELIST', $article_list);
+define('ARTICLELIST', $articles_list);
 
 /***/
 if(isset($_GET['article_id'])){
     $article_id = $_GET['article_id'];
-    $sth = $pdo->prepare("SELECT * FROM article WHERE id = $article_id");
+    $sth = $pdo->prepare("SELECT * FROM articles WHERE id = $article_id");
     $sth->execute();
 
     $article_detail = $sth->fetch(\PDO::FETCH_ASSOC);
 
     define('ARTICLEDETAIL', $article_detail);
 //var_dump(ARTICLEDETAIL);
+$sth = $pdo->prepare("SELECT * FROM articles_photo WHERE articles_id = $article_id");
+$sth->execute();
+
+$article_photos = $sth->fetchAll(\PDO::FETCH_ASSOC);
 }
