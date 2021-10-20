@@ -15,7 +15,7 @@
                     <?php $str_active = 'active'; ?>
                     <?php foreach($articles_photos as $articles_photo):?>
                         <div class="carousel-item <?php echo $str_active ?>">
-                            <img src="<?php echo $articles_photo['url']?>" class="d-block w-100" alt="<?php echo $articles_photo['alt_text']?>">
+                            <img src="/images/immagini/<?php echo $articles_photo['url']?>" class="d-block w-100" alt="<?php echo $articles_photo['alt_text']?>">
                         </div>
                         <?php $str_active = ''; ?>
                     <?php endforeach?>
@@ -24,7 +24,7 @@
                     <?php $counter = 0; ?>
                     <?php foreach($articles_photos as $articles_photo):?>
                         <a data-bs-target="#carouselExampleIndicators" data-bs-slide-to="<?php echo $counter?>" class="<?php echo $str_active ?> me-2" aria-current="true" aria-label="Slide 1">
-                            <img src="<?php echo $articles_photo['url']?>" class="d-block w-100" alt="...">
+                            <img src="/images/immagini/<?php echo $articles_photo['url']?>" class="d-block w-100" alt="...">
                         </a>
                     <?php $counter++;?>
                     <?php $str_active = ''; ?>

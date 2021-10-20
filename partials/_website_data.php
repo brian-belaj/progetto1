@@ -101,5 +101,16 @@ if(isset($_GET['article_id'])){
 
     $articles_photos = $sth->fetchall(\PDO::FETCH_ASSOC);
 
-//var_dump(ARTICLEDETAIL);
+// var_dump(ARTICLEDETAIL);
 }
+
+
+/* FIST PHOTO THINGY */
+
+$sth = $pdo->prepare("SELECT * FROM articles_photo ORDER BY ord");
+$sth->execute();
+
+$first_photo = $sth->fetch(\PDO::FETCH_ASSOC);
+define('FIRSTPHOTO', $first_photo);
+
+$waga = var_dump(FIRSTPHOTO);

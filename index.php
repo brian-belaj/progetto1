@@ -14,7 +14,6 @@
 
     </section>
 
-
     <section class="mt-5 container">
         <picture>
             <img src="/images/immagini/IMG_4170.jpg" class="d-block w-100" alt="...">
@@ -30,10 +29,10 @@
             <?php foreach (ARTICLELIST as $article) : ?>
                 <article class="col-6 col-lg-3">
                     <div class="card border-0">
-                        <img src="<?php echo $article['img'] ?>" class="card-img-top" alt="<?php echo $article['alt_text'] ?>">
+                        <img src="/images/immagini/<?php get_first_photo($article['id']) ?>" class="card-img-top" alt="<?php echo $article['alt_text'] ?>">
                         <div class="card-body px-0">
                             <h5 class="card-title"><?php echo $article['name'] ?></h5>
-                            <p class="card-text"><?php echo $article['description'] ?></p>
+                            <p class="card-text"><?php echo $article['description'] ?> </p>
                             <div class="d-flex">
                                 <a href="/details.php?article_id=<?php echo $article['id']?>" class="flex-fill btn btn-primary">Info</a>
                                 <a href="#" class="btn btn-primary ms-3"><i class="bi bi-bag-plus-fill"></i></a>

@@ -11,3 +11,12 @@ function __($key, $lang = 'it') {
         return $key . " missing translation";
     }
 }
+
+function get_first_photo($x){
+
+    FIRSTPHOTO;
+    
+    echo FIRSTPHOTO['url'];
+    $waga;
+
+}
