@@ -13,18 +13,18 @@
                 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner mb-2">
                     <?php $str_active = 'active'; ?>
-                    <?php foreach($articles_photos as $articles_photo):?>
+                    <?php foreach($article_photos as $article_photo):?>
                         <div class="carousel-item <?php echo $str_active ?>">
-                            <img src="/images/immagini/<?php echo $articles_photo['url']?>" class="d-block w-100" alt="<?php echo $articles_photo['alt_text']?>">
+                            <img src="<?php echo $article_photo['img']?>" class="d-block w-100" alt="<?php echo $article_photo['alt']?>">
                         </div>
                         <?php $str_active = ''; ?>
                     <?php endforeach?>
                     </div>
                     <div class="d-flex flex-row">
                     <?php $counter = 0; ?>
-                    <?php foreach($articles_photos as $articles_photo):?>
+                    <?php foreach($article_photos as $article_photo):?>
                         <a data-bs-target="#carouselExampleIndicators" data-bs-slide-to="<?php echo $counter?>" class="<?php echo $str_active ?> me-2" aria-current="true" aria-label="Slide 1">
-                            <img src="/images/immagini/<?php echo $articles_photo['url']?>" class="d-block w-100" alt="...">
+                            <img src="<?php echo $article_photo['img']?>" class="d-block w-100" alt="...">
                         </a>
                     <?php $counter++;?>
                     <?php $str_active = ''; ?>
