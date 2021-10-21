@@ -99,4 +99,7 @@ $sth = $pdo->prepare("SELECT * FROM articles_photo WHERE articles_id = $article_
 $sth->execute();
 
 $article_photos = $sth->fetchAll(\PDO::FETCH_ASSOC);
+
+$sth = $pdo->prepare("SELECT * FROM articles_photo ORDER BY articles_id LIMIT 1");
+$sth->execute();
 }
