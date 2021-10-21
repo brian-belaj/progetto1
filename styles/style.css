@@ -60,3 +60,17 @@
 #login_container.login-form-show {
   transform: translateY(0);
 }
+
+#srcBar{
+  position: fixed;
+  z-index: 10;
+  transform: translateY(100vw);
+  background-color: white;
+  width: 100vw;
+  max-width: inherit;
+  height: 100vh;
+  transition: transform 0.7s;
+}
+#srcBar.srcBar-show {
+  transform: translateY(0);
+}
