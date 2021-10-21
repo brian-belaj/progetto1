@@ -18,7 +18,7 @@ $website_texts = [
 define('WEBSITE_TEXTS', $website_texts);
 
 
-$sth = $pdo->prepare("SELECT * FROM navigation_menu ORDER BY ordine");
+$sth = $pdo->prepare("SELECT * FROM navigation_menu ORDER BY ord");
 $sth->execute();
 
 $menu = $sth->fetchAll(\PDO::FETCH_ASSOC);
@@ -31,7 +31,8 @@ $menu = [
 ];*/
 
 define('WEBSITE_MENU', $menu);
-$sth = $pdo->prepare("SELECT * FROM carousel WHERE attivo=1 ORDER BY ordine");
+
+$sth = $pdo->prepare("SELECT * FROM carousel WHERE active=1 ORDER BY ord");
 $sth->execute();
 $carousel_home = $sth->fetchAll(\PDO::FETCH_ASSOC);
 
@@ -81,9 +82,9 @@ define('ARTICLES', $articles);
 $sth = $pdo->prepare("SELECT * FROM articles");
 $sth->execute();
 
-$articles_list = $sth->fetchAll(\PDO::FETCH_ASSOC);
+$articles = $sth->fetchAll(\PDO::FETCH_ASSOC);
 
-define('ARTICLELIST', $articles_list);
+define('ARTICLES', $articles);
 
 /***/
 if(isset($_GET['article_id'])){
@@ -93,12 +94,22 @@ if(isset($_GET['article_id'])){
 
     $article_detail = $sth->fetch(\PDO::FETCH_ASSOC);
     define('ARTICLEDETAIL', $article_detail);
-//var_dump(ARTICLEDETAIL);
-$sth = $pdo->prepare("SELECT * FROM articles_photo WHERE articles_id = $article_id ORDER BY ordine");
-$sth->execute();
-$article_photos = $sth->fetchAll(\PDO::FETCH_ASSOC);
 
-$article_photos = $sth->fetchAll(\PDO::FETCH_ASSOC);
+    $sth = $pdo->prepare("SELECT * FROM article_photo WHERE article_id = $article_id");
+    $sth->execute();
 
+    $article_photos = $sth->fetchAll(\PDO::FETCH_ASSOC);
 
+// var_dump(ARTICLEDETAIL);
 }
+
+
+/* FIST PHOTO THINGY */
+
+/* $sth = $pdo->prepare("SELECT * FROM articles_photo ORDER BY ord");
+$sth->execute();
+
+$first_photo = $sth->fetch(\PDO::FETCH_ASSOC);
+define('FIRSTPHOTO', $first_photo);
+
+$waga = var_dump(FIRSTPHOTO); */
