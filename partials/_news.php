@@ -1,6 +1,7 @@
-<?php foreach ($news_home as $news_item) : ?>
-    <?php if ($news_item['ordine'] % 2 == 0) : ?>
-        <!-- non si può fare diversamente da ordine?-->
+<?php $conta = 0 ?>
+
+<?php foreach (NEWS as $news_item) : ?>
+    <?php if ($conta % 2 == 0) : ?>
         <article class="row gx-0">
             <div class="col-12 col-lg-6"><img src="<?php echo $news_item['img'] ?>" class="d-block w-100" alt="<?php echo $news_item['alt'] ?>"></div>
             <div class="col-12 col-lg-6">
@@ -40,4 +41,5 @@
         </article>
 
     <?php endif ?>
+    <?php $conta++ ?>
 <?php endforeach ?>
