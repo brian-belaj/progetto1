@@ -30,7 +30,8 @@
             <?php foreach (ARTICLELIST as $article) : ?>
                 <article class="col-6 col-lg-3">
                     <div class="card border-0">
-                        <img src="<?php echo $article['immagine'] ?>" class="card-img-top" alt="<?php echo $article['alt'] ?>">
+                        <?php $foto = getArticleFoto($pdo, $article) ?>
+                        <img src="<?php echo $foto['immagine'] ?>" class="card-img-top" alt="<?php echo $foto['alt'] ?>">
                         <div class="card-body px-0">
                             <h5 class="card-title"><?php echo $article['titolo'] ?></h5>
                             <p class="card-text"><?php echo $article['testo'] ?></p>

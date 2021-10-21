@@ -94,11 +94,9 @@ if(isset($_GET['article_id'])){
     $article_detail = $sth->fetch(\PDO::FETCH_ASSOC);
     define('ARTICLEDETAIL', $article_detail);
 //var_dump(ARTICLEDETAIL);
-$sth = $pdo->prepare("SELECT * FROM articles_photo WHERE articles_id = $article_id");
+$sth = $pdo->prepare("SELECT * FROM articles_photo WHERE articles_id = $article_id ORDER BY ordine");
 $sth->execute();
 $article_photos = $sth->fetchAll(\PDO::FETCH_ASSOC);
-$sth = $pdo->prepare("SELECT * FROM articles_photo WHERE articles_id = $article_id LIMIT 1");
-$sth->execute();
 
 $article_photos = $sth->fetchAll(\PDO::FETCH_ASSOC);
 
