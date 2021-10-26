@@ -19,7 +19,7 @@ if (isset($_POST['id'])) {
     if (strlen($_POST['name']) > 2) {
         $name = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
     } else {
-        $errors['name']= 'Il titolo deve essere più lungo di due caratteri!';
+        $errors['name']= 'Il titolo  deve essere più lungo di due caratteri!';
 
     }
    
