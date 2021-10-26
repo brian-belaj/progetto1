@@ -8,8 +8,24 @@ if (!isset($article_detail)) {
 }
 if (isset($_POST['id'])) {
     $article_id = $_POST['id'];
-    $updated_name = $_POST['name'];
-    $sth = $pdo->prepare("UPDATE article SET `name`= '$updated_name' WHERE id = $article_id");
+    echo ($_POST['name']);
+
+    if (strlen($_POST['name']) > 0) {
+        $updated_name = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
+    } else {
+        echo "titolo obbligatorio";
+        die();
+    }
+    $updated_name = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
+    var_dump($updated_name);
+
+
+    $updated_img = $_POST['img'];
+    $updated_ord = $_POST['ord'];
+    $updated_price = $_POST['price'];
+    $updated_category = $_POST['category'];
+    $sth = $pdo->prepare("UPDATE article SET `name`= '$updated_name', `img`= '$updated_img',
+    `ord`= '$updated_ord', `price`= '$updated_price', `category`= '$updated_category'  WHERE id = $article_id");
     $sth->execute();
     $sth = $pdo->prepare("SELECT * FROM article WHERE id = $article_id");
     $sth->execute();
