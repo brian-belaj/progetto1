@@ -18,15 +18,17 @@ if (isset ($_POST['id'])){
 }
 ?>
 <main>
-    <?php var_dump($article_detail); ?>
-    <form action="" method="POST">
-        <input type="hidden" name="id" value="<?php echo $article_detail['id']?>">
-        <input type="text" name="name" value="<?php echo $article_detail['name']?>">
-        <input type="text" name="img" value="<?php echo $article_detail['img']?>" >
-        <input type="text" name="ord" value="<?php echo $article_detail['ord']?>" >
-        <input type="text" name="price" value="<?php echo $article_detail['price']?>" >
-        <input type="text" name="category" value="<?php echo $article_detail['category']?>" >
-        <button type="submit">Salva</button>
+    <?php   ($article_detail) ?>
+    <form class="form-row" action="" method="POST">
+        <div class="form-group col-md-6">
+        <input class="form-control" type="hidden" name="id" value="<?php echo $article_detail['id']?>"><br>
+        <input class="form-control" type="text" name="name"  value="<?php echo $article_detail['name']?>"><br>
+        <input class="form-control" type="text" name="img" value="<?php echo $article_detail['img']?>" ><br>
+        <input class="form-control" type="text" name="ord" value="<?php echo $article_detail['ord']?>" ><br>
+        <input class="form-control" type="text" name="price" value="<?php echo $article_detail['price']?>" ><br>
+        <input class="form-control" type="text" name="category" value="<?php echo $article_detail['category']?>"><br>
+        <button class="btn btn-outline-primary d-flex justify-content-center" type="submit">Salva</button>
+        </div>
     </form>
 </main>
 
