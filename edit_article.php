@@ -6,31 +6,44 @@ if (!isset($article_detail)) {
     require('partials/404.php');
     die();
 }
+$errors = [];
+
 if (isset($_POST['id'])) {
+    $name = $_POST['name'];
+    $img = $_POST['img'];
+    $ord = $_POST['ord'];
+    $price = $_POST['price'];
+    $category = $_POST['category'];
+
     $article_id = $_POST['id'];
-    echo ($_POST['name']);
-
-    if (strlen($_POST['name']) > 0) {
-        $updated_name = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
+    if (strlen($_POST['name']) > 2) {
+        $name = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
     } else {
-        echo "titolo obbligatorio";
-        die();
+        $errors['name']= 'Il titolo deve essere più lungo di due caratteri!';
+
     }
-    $updated_name = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
-    var_dump($updated_name);
+   
 
+    if(count ($errors)===0){
 
-    $updated_img = $_POST['img'];
-    $updated_ord = $_POST['ord'];
-    $updated_price = $_POST['price'];
-    $updated_category = $_POST['category'];
-    $sth = $pdo->prepare("UPDATE article SET `name`= '$updated_name', `img`= '$updated_img',
-    `ord`= '$updated_ord', `price`= '$updated_price', `category`= '$updated_category'  WHERE id = $article_id");
-    $sth->execute();
+        $sth = $pdo->prepare("UPDATE article SET `name`= '$name', `img`= '$img',
+        `ord`= '$ord', `price`= '$price', `category`= '$category'  
+        WHERE id = $article_id");
+        $sth->execute();
+
+    } else{
+        var_dump($errors);
+    }
     $sth = $pdo->prepare("SELECT * FROM article WHERE id = $article_id");
     $sth->execute();
 
     $article_detail = $sth->fetch(\PDO::FETCH_ASSOC);
+} else{
+    $name = $article_detail['name'];
+    $img = $article_detail['img'];
+    $ord = $article_detail['ord'];
+    $price = $article_detail['price'];
+    $category = $article_detail['category'];
 }
 ?>
 <main>
@@ -38,11 +51,11 @@ if (isset($_POST['id'])) {
     <form class="form-row" action="" method="POST">
         <div class="form-group col-md-6">
         <input class="form-control" type="hidden" name="id" value="<?php echo $article_detail['id']?>"><br>
-        <input class="form-control" type="text" name="name"  value="<?php echo $article_detail['name']?>"><br>
-        <input class="form-control" type="text" name="img" value="<?php echo $article_detail['img']?>" ><br>
-        <input class="form-control" type="text" name="ord" value="<?php echo $article_detail['ord']?>" ><br>
-        <input class="form-control" type="text" name="price" value="<?php echo $article_detail['price']?>" ><br>
-        <input class="form-control" type="text" name="category" value="<?php echo $article_detail['category']?>"><br>
+        <input class="form-control" type="text" name="name"  value="<?php echo $name?>"><br>
+        <input class="form-control" type="text" name="img" value="<?php echo $img?>" ><br>
+        <input class="form-control" type="text" name="ord" value="<?php echo $ord?>" ><br>
+        <input class="form-control" type="text" name="price" value="<?php echo $price?>" ><br>
+        <input class="form-control" type="text" name="category" value="<?php echo $category?>"><br>
         <button class="btn btn-outline-primary d-flex justify-content-center" type="submit">Salva</button>
         </div>
     </form>
