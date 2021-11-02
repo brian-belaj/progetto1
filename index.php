@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html class="no-js" lang="zxx">
+<?php require 'db_connection.php'?>
+<?php require 'functions.php'?>
+<?php require 'website_data.php'?>
 
 <head>
     <meta charset="utf-8">
@@ -226,7 +229,7 @@
                         <div class="col-lg-12">
                             <div class="hero-three-category">
                                 <div class="category-step-1" data-aos="fade-up">
-                                    <a href="#" class="btn-primary-three btn-large">WooCommerce</a>
+                                    <a href="#" class="btn-primary-three btn-large" onclick="<?php echo ChosenCategory($post_argument[1]) ?>">WooCommerce</a>
                                     <a href="#" class="btn-primary-three btn-large">WordPress</a>
                                     <a href="#" class="btn-primary-three btn-large">Magento</a>
                                     <a href="#" class="btn-primary-three btn-large">Laravel</a>
@@ -858,7 +861,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing eli
 
     <!-- Main JS -->
     <script src="assets/js/main.js"></script>
-
 
 </body>
 
